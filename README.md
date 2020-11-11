@@ -35,7 +35,7 @@ Crie um AnimationBuilder e passe o controller como parent e retorne o AnimatedCo
         animation: controller,
         );
 
-    Você ainda pode ajudar largura e altura definindo um Container
+    Você ainda pode ajustar largura e altura definindo um Container
 
     Size size = MediaQuery.of(context).size;
     Container(
