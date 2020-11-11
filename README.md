@@ -10,28 +10,30 @@ Exemplo de uso:
 
 Crie um controller:
 
-AnimationController controller = AnimationController(vsync: this, duration: Duration(milliseconds: 600));
 
-Crie um AnimationBuilder e passe o controller como parent e retorne o AnimatedComponent no builder
 
-AnimatedBuilder(
-      builder: (context, child) {
-        return AnimatedComponent(
-          controller,
-          Text("Titulo"),
-          Icon(
-            Icon(Icons.person),
-            size: 40,
-          ),
-          //opcionais
-          iconSize: 40.0,//para melhor desempenho, defina o mesmo valor do tamanho do icone
-          color: Colors.blue, //Não use se estiver usando decoration
-          padding: EdgeInsets.only(left: 16),
-          //decoration:BoxDecoration()
+Crie um AnimationBuilder e passe o controller como parent e retorne o AnimatedComponent no builder:
+
+    AnimationController controller = AnimationController(vsync: this, duration: Duration(milliseconds: 600));
+
+    AnimatedBuilder(
+        builder: (context, child) {
+            return AnimatedComponent(
+            controller,
+            Text("Titulo"),
+            Icon(
+                Icon(Icons.person),
+                size: 40,
+            ),
+            //opcionais
+            iconSize: 40.0,//para melhor desempenho, defina o mesmo valor do tamanho do icone
+            color: Colors.blue, //Não use se estiver usando decoration
+            padding: EdgeInsets.only(left: 16),
+            //decoration:BoxDecoration()
+            );
+        },
+        animation: controller,
         );
-      },
-      animation: controller,
-    );
 
     Você ainda pode ajudar largura e altura definindo um Container
 
