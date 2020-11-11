@@ -50,7 +50,7 @@ class _ComponentState extends State<Component> with TickerProviderStateMixin {
     textBottom =
         AlignmentTween(begin: Alignment.center, end: Alignment.bottomCenter)
             .animate(CurvedAnimation(
-                curve: Interval(0, 0.8, curve: Curves.ease), parent: stage1));
+                curve: Interval(0.2, 0.8, curve: Curves.ease), parent: stage1));
   }
 
   @override

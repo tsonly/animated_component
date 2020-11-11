@@ -22,7 +22,7 @@ class AnimatedComponent extends StatelessWidget {
         textBottom =
             AlignmentTween(begin: Alignment.center, end: Alignment.bottomCenter)
                 .animate(CurvedAnimation(
-                    curve: Interval(0, 0.8, curve: Curves.ease),
+                    curve: Interval(0.2, 0.8, curve: Curves.ease),
                     parent: controller)) {
     if (padding != null) this.padding = padding;
     if (iconSize != null) this.iconSize = iconSize;
